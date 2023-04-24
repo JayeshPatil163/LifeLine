@@ -20,9 +20,9 @@ namespace LifelineApp
     {
         public void updatedata(double tot, double totdis, double gst)
         {
-            //double gst = 0;
+           /* //double gst = 0;
            // con.Open();
-            /*string qry = "select po_id,batch_no,expiry,mrp,rate,qty,total,discount,free_qty from podetails where po_id='" + dpm + "' And batch_no='" + batno + "' and total='" + mrp + "'";
+            string qry = "select po_id,batch_no,expiry,mrp,rate,qty,total,discount,free_qty from podetails where po_id='" + dpm + "' And batch_no='" + batno + "' and total='" + mrp + "'";
             da = new MySqlDataAdapter(qry, con);
             da.Fill(data);
             DataRow r;
