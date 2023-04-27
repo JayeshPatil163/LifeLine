@@ -141,7 +141,7 @@ namespace LifelineApp
             fgt = (tt * fgt) / 100;
             fgt = fgt + tt;
             con.Open();
-            string s = "insert into podetails(po_id,batch_no,expiry,mrp,rate,qty,total,discount,cgst,sgst,gst_total,free_qty) values('" + textBox_pid.Text + "'," + textBox1_batch.Text + ",'" + textBox2_ex.Text + "','" + textBox3_MRP.Text + "','" + textBox4_rate.Text + "','" + textBox5_qty.Text + "','" + textBox_total.Text + "','" + a + "','" + d + "','" + c + "','" + fgt + "','" + textBox7_free.Text + "')";
+            string s = "insert into podetails(drug_id,batch_no,expiry,mrp,rate,qty,total,discount,cgst,sgst,gst_total,free_qty) values('" + textBox_pid.Text + "'," + textBox1_batch.Text + ",'" + textBox2_ex.Text + "','" + textBox3_MRP.Text + "','" + textBox4_rate.Text + "','" + textBox5_qty.Text + "','" + textBox_total.Text + "','" + a + "','" + d + "','" + c + "','" + fgt + "','" + textBox7_free.Text + "')";
             cmd = new MySqlCommand(s, con);
             DataTable dt = new DataTable();
 

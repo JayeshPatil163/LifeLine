@@ -78,3 +78,45 @@ D:\Lifeline app\Project\LifelineApp\obj\Debug\net6.0-windows\refint\LifelineApp.
 D:\Lifeline app\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.pdb
 D:\Lifeline app\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.genruntimeconfig.cache
 D:\Lifeline app\Project\LifelineApp\obj\Debug\net6.0-windows\ref\LifelineApp.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\LifelineApp.exe
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\LifelineApp.deps.json
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\LifelineApp.runtimeconfig.json
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\LifelineApp.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\LifelineApp.pdb
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\comerr64.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\gssapi64.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\k5sprt64.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\krb5_64.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\krbcc64.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.csproj.AssemblyReference.cache
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.dlmaster_insert.resources
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.dlrmaster_data.resources
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.Form1.resources
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.form_dashboard.resources
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.frmUpdte_dlrmaster.resources
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.podetail.resources
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.po_master1.resources
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.product_list.resources
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.Properties.Resources.resources
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.pro_list_data.resources
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.updt_prodlist.resources
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.csproj.GenerateResource.cache
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.AssemblyInfoInputs.cache
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.AssemblyInfo.cs
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.csproj.CoreCompileInputs.cache
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.csproj.CopyComplete
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\refint\LifelineApp.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.pdb
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.genruntimeconfig.cache
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\ref\LifelineApp.dll
+C:\Users\Mayur\Desktop\new\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.stock.resources
+D:\Lifeline app\Project\LifelineApp\obj\Debug\net6.0-windows\LifelineApp.stock.resources

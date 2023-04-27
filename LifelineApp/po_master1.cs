@@ -20,57 +20,57 @@ namespace LifelineApp
     {
         public void updatedata(double tot, double totdis, double gst)
         {
-           /* //double gst = 0;
-           // con.Open();
-            string qry = "select po_id,batch_no,expiry,mrp,rate,qty,total,discount,free_qty from podetails where po_id='" + dpm + "' And batch_no='" + batno + "' and total='" + mrp + "'";
-            da = new MySqlDataAdapter(qry, con);
-            da.Fill(data);
-            DataRow r;
-            for (int i = 0; i < data.Rows.Count; i++)
-            {
-                // Access the current row
-                //DataRow r = table.Rows[i];
-                r = data.Rows[i];
-                DataRow destRow = table.NewRow();
-                destRow.ItemArray = r.ItemArray;
-                table.Rows.Add(destRow);
+            /* //double gst = 0;
+            // con.Open();
+             string qry = "select po_id,batch_no,expiry,mrp,rate,qty,total,discount,free_qty from podetails where po_id='" + dpm + "' And batch_no='" + batno + "' and total='" + mrp + "'";
+             da = new MySqlDataAdapter(qry, con);
+             da.Fill(data);
+             DataRow r;
+             for (int i = 0; i < data.Rows.Count; i++)
+             {
+                 // Access the current row
+                 //DataRow r = table.Rows[i];
+                 r = data.Rows[i];
+                 DataRow destRow = table.NewRow();
+                 destRow.ItemArray = r.ItemArray;
+                 table.Rows.Add(destRow);
 
-                /*DataRow row = dt.Rows[i];
-                 
-                   
-                    newRow["po_id"] = dt.Columns[0];
-                    newRow["batch_no"] = dt.Columns[1];
-                    newRow["expiry"] = dt.Columns[2];
-                    newRow["mrp"] = dt.Columns[3];
-                    newRow["rate"] = dt.Columns[4];
-                    newRow["qty"] = dt.Columns[5];
-                    newRow["total"] = dt.Columns[6];
-                    newRow["discount"] = dt.Columns[7];
-                    newRow["free_qty"] = dt.Columns[8];
+                 /*DataRow row = dt.Rows[i];
 
 
-                    
+                     newRow["po_id"] = dt.Columns[0];
+                     newRow["batch_no"] = dt.Columns[1];
+                     newRow["expiry"] = dt.Columns[2];
+                     newRow["mrp"] = dt.Columns[3];
+                     newRow["rate"] = dt.Columns[4];
+                     newRow["qty"] = dt.Columns[5];
+                     newRow["total"] = dt.Columns[6];
+                     newRow["discount"] = dt.Columns[7];
+                     newRow["free_qty"] = dt.Columns[8];
 
-                    // table.Columns.Add(c);
-                     
-                    //DataColumn dc = table.Columns[i];
-                    
-                    /*double to = Convert.ToDouble(row[c]);
-                    j++;
-                    c = table1.Columns[j];
-                    double di = Convert.ToDouble(row[c]);
-                    //calculating taxable amount
-                    double ta = to - di;
-                    l7.Text = ta.ToString();
-                    // calculating gst
-                    j++;
-                    c = table1.Columns[j];
-                    gst = gst + (ta * Convert.ToDouble(row[c])) / 100;
-                    break;
-                
-                table.Rows.Add(newRow);
-            }
-            table.Rows.Add(da);*/
+
+
+
+                     // table.Columns.Add(c);
+
+                     //DataColumn dc = table.Columns[i];
+
+                     /*double to = Convert.ToDouble(row[c]);
+                     j++;
+                     c = table1.Columns[j];
+                     double di = Convert.ToDouble(row[c]);
+                     //calculating taxable amount
+                     double ta = to - di;
+                     l7.Text = ta.ToString();
+                     // calculating gst
+                     j++;
+                     c = table1.Columns[j];
+                     gst = gst + (ta * Convert.ToDouble(row[c])) / 100;
+                     break;
+
+                 table.Rows.Add(newRow);
+             }
+             table.Rows.Add(da);*/
 
             dataGridView1.DataSource = table;
             total = total + tot;
@@ -153,14 +153,14 @@ namespace LifelineApp
         MySqlDataReader dr;
         string DelearID = string.Empty;
         int dpm, batno;
-        double mrp,total = 0, tot_disc = 0, diftotdis = 0, gst_tot = 0;
+        double mrp, total = 0, tot_disc = 0, diftotdis = 0, gst_tot = 0;
         DataTable table = new DataTable();
         DataTable data = new DataTable();
 
         public po_master1()
         {
 
-            table.Columns.Add("po_id");
+            table.Columns.Add("drug_id");
             table.Columns.Add("batch_no");
             table.Columns.Add("expiry");
             table.Columns.Add("mrp");
@@ -172,24 +172,7 @@ namespace LifelineApp
             InitializeComponent();
         }
 
-        private void po_master1_Load(object sender, EventArgs e)
-        {
-
-
-            deler();
-            string a;
-            MySqlDataReader dr;
-            cmd = new MySqlCommand("select count(*) from podetails", con);
-            con.Open();
-            dr = cmd.ExecuteReader();
-            dr.Read();
-            if (Convert.ToInt32(dr[0]) != 0)
-            {
-                con.Close();
-               // updatedata();
-            }
-            con.Close();
-        }
+       
 
         public void deler()
         {
@@ -211,29 +194,13 @@ namespace LifelineApp
 
 
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+
+
+        private void button4_Click(object sender, EventArgs e)
         {
-            if (comboBox2.SelectedIndex != -1)
-            {
-                cmd = new MySqlCommand("select id from dlrmaster where name='" + comboBox2.Text + "'", con);
-                con.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        DelearID = dr[0].ToString();
-                    }
-                    dr.Close();
-                }
-                dr.Close();
-                con.Close();
-            }
 
-            textBox_id.Text = "" + DelearID;
-
-
-
+            product_list pl = new product_list();
+            pl.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -248,32 +215,6 @@ namespace LifelineApp
             cmd.ExecuteNonQuery();
             MessageBox.Show("product details inserted");
             con.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            podetail pod = new podetail();
-            pod.ShowDialog();
-            /*
-                        dpm = pod.t;
-                        batno = pod.ban;
-                        mrp = pod.pmr;*/
-
-
-            table.Rows.Add(pod.textBox_pid.Text, pod.textBox1_batch.Text, pod.textBox2_ex.Text, pod.textBox3_MRP.Text, pod.textBox4_rate.Text, pod.textBox5_qty.Text, pod.textBox_total.Text, pod.pmr, pod.textBox7_free.Text);
-
-            updatedata(Double.Parse(pod.textBox_total.Text), pod.pmr, pod.fgt);
-            pod.Dispose();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox_trtype_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -304,6 +245,63 @@ namespace LifelineApp
             {
                 MessageBox.Show("Please Select the row first");
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            podetail pod = new podetail();
+            pod.ShowDialog();
+            /*
+                        dpm = pod.t;
+                        batno = pod.ban;
+                        mrp = pod.pmr;*/
+
+
+            table.Rows.Add(pod.textBox_pid.Text, pod.textBox1_batch.Text, pod.textBox2_ex.Text, pod.textBox3_MRP.Text, pod.textBox4_rate.Text, pod.textBox5_qty.Text, pod.textBox_total.Text, pod.pmr, pod.textBox7_free.Text);
+
+            updatedata(Double.Parse(pod.textBox_total.Text), pod.pmr, pod.fgt);
+            pod.Dispose();
+        }
+
+        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedIndex != -1)
+            {
+                cmd = new MySqlCommand("select id from dlrmaster where name='" + comboBox2.Text + "'", con);
+                con.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        DelearID = dr[0].ToString();
+                    }
+                    dr.Close();
+                }
+                dr.Close();
+                con.Close();
+            }
+
+            textBox_id.Text = "" + DelearID;
+
+        }
+
+        private void po_master1_Load_1(object sender, EventArgs e)
+        {
+
+            deler();
+            string a;
+            MySqlDataReader dr;
+            cmd = new MySqlCommand("select count(*) from podetails", con);
+            con.Open();
+            dr = cmd.ExecuteReader();
+            dr.Read();
+            if (Convert.ToInt32(dr[0]) != 0)
+            {
+                con.Close();
+                // updatedata();
+            }
+            con.Close();
         }
     }
 }

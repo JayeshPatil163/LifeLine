@@ -50,6 +50,7 @@
             label9 = new Label();
             label10 = new Label();
             label11 = new Label();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -71,7 +72,7 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(121, 23);
             comboBox2.TabIndex = 3;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged_1;
             // 
             // label2
             // 
@@ -120,7 +121,6 @@
             textBox_trtype.Size = new Size(121, 23);
             textBox_trtype.TabIndex = 12;
             textBox_trtype.Text = "OFFLINE";
-            textBox_trtype.TextChanged += textBox_trtype_TextChanged;
             // 
             // dataGridView1
             // 
@@ -135,7 +135,6 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(946, 285);
             dataGridView1.TabIndex = 9;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // button1
             // 
@@ -146,7 +145,6 @@
             button1.TabIndex = 10;
             button1.Text = "SUBMIT";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // textBox_id
             // 
@@ -177,7 +175,7 @@
             button2.TabIndex = 16;
             button2.Text = "ADD";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += button2_Click_1;
             // 
             // button3
             // 
@@ -188,7 +186,6 @@
             button3.TabIndex = 17;
             button3.Text = "DELETE";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
             // 
             // label5
             // 
@@ -279,11 +276,22 @@
             label11.TabIndex = 27;
             label11.Text = "Net Amount";
             // 
+            // button4
+            // 
+            button4.Location = new Point(924, 125);
+            button4.Name = "button4";
+            button4.Size = new Size(123, 34);
+            button4.TabIndex = 28;
+            button4.Text = "NEW MEDICINE";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // po_master1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1142, 637);
+            Controls.Add(button4);
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
@@ -309,7 +317,7 @@
             Name = "po_master1";
             Text = "po_master1";
             WindowState = FormWindowState.Maximized;
-            Load += po_master1_Load;
+            Load += po_master1_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -339,5 +347,6 @@
         private Label label9;
         private Label label10;
         private Label label11;
+        private Button button4;
     }
 }

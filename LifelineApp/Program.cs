@@ -13,7 +13,7 @@ namespace LifelineApp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new po_master1(/*new int(), new int(), new double()*/));
+            Application.Run(new po_master1());
             
         }
     }
