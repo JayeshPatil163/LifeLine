@@ -140,10 +140,10 @@ namespace LifelineApp
             tt = tt - a;
             fgt = (tt * fgt) / 100;
             fgt = fgt + tt;
-            con.Open();
+            /*con.Open();
             string s = "insert into podetails(drug_id,batch_no,expiry,mrp,rate,qty,total,discount,cgst,sgst,gst_total,free_qty) values('" + textBox_pid.Text + "'," + textBox1_batch.Text + ",'" + textBox2_ex.Text + "','" + textBox3_MRP.Text + "','" + textBox4_rate.Text + "','" + textBox5_qty.Text + "','" + textBox_total.Text + "','" + a + "','" + d + "','" + c + "','" + fgt + "','" + textBox7_free.Text + "')";
-            cmd = new MySqlCommand(s, con);
-            DataTable dt = new DataTable();
+            cmd = new MySqlCommand(s, con);*/
+            //DataTable dt = new DataTable();
 
             t = Convert.ToInt32(textBox_pid.Text);
             ban = Convert.ToInt32(textBox1_batch.Text);
@@ -160,9 +160,8 @@ namespace LifelineApp
             dt.Columns.Add("free_qty");
             dt.Rows.Add(textBox_pid.Text, textBox1_batch.Text, textBox2_ex.Text, textBox3_MRP.Text, textBox4_rate.Text, textBox5_qty.Text, textBox_total.Text, a, textBox7_free.Text);
             //po_id,batch_no,expiry,mrp,rate,qty,total,discount,free_qty*/
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Dealer details inserted");
-            con.Close();
+           // cmd.ExecuteNonQuery();
+            
 
             this.Close();
             //po_master1 p = new po_master1(t,ban,pmr);

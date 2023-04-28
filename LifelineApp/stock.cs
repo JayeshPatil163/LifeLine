@@ -31,6 +31,7 @@ namespace LifelineApp
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+ 
 
             string searchTerm = textBox1.Text.ToLower();
 
@@ -51,6 +52,41 @@ namespace LifelineApp
                 row.Visible = matchFound;
             }
 
+ 
+           
+                searchTerm = textBox1.Text.ToLower();
+                bool rowFound = false;
+
+                foreach (DataGridViewRow row in dgv_stock.Rows)
+                {
+                    bool rowContainsSearchTerm = false;
+
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchTerm))
+                        {
+                            rowContainsSearchTerm = true;
+                            break;
+                        }
+                    }
+
+                    if (rowContainsSearchTerm)
+                    {
+                        // move the CurrencyManager position to the found row
+                        ((CurrencyManager)dgv_stock.BindingContext[dgv_stock.DataSource]).Position = row.Index;
+                        rowFound = true;
+                    }
+
+                    row.Visible = rowContainsSearchTerm;
+                }
+
+                if (!rowFound)
+                {
+                    // display a message if no rows are found
+                    MessageBox.Show("No rows matching the search term were found.");
+                }
+            
+ 
 
         }
     }

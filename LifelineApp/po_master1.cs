@@ -169,10 +169,23 @@ namespace LifelineApp
             table.Columns.Add("total");
             table.Columns.Add("discount");
             table.Columns.Add("free_qty");
+
+            data.Columns.Add("drug_id");
+            data.Columns.Add("batch_no");
+            data.Columns.Add("expiry");
+            data.Columns.Add("mrp");
+            data.Columns.Add("rate");
+            data.Columns.Add("qty");
+            data.Columns.Add("total");
+            data.Columns.Add("discount");
+            data.Columns.Add("cgst");
+            data.Columns.Add("sgst");
+            data.Columns.Add("gst_total");
+            data.Columns.Add("free_qty");
             InitializeComponent();
         }
 
-       
+
 
         public void deler()
         {
@@ -196,26 +209,15 @@ namespace LifelineApp
 
 
 
-        private void button4_Click(object sender, EventArgs e)
+        /*private void button4_Click(object sender, EventArgs e)
         {
 
             product_list pl = new product_list();
             pl.Show();
         }
+*/
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            string sup = textBox_id.Text;
-            string tr = textBox_trtype.Text;
-            string bill = textBox1.Text;
-            string date = dateTimePicker1.Text;
-            string s = "insert into pomaster(inc_date,sup_id,sup_bill_no,tr_tp) values('" + date + "','" + sup + "','" + bill + "','" + tr + "')";
-            cmd = new MySqlCommand(s, con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("product details inserted");
-            con.Close();
-        }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -258,6 +260,11 @@ namespace LifelineApp
 
 
             table.Rows.Add(pod.textBox_pid.Text, pod.textBox1_batch.Text, pod.textBox2_ex.Text, pod.textBox3_MRP.Text, pod.textBox4_rate.Text, pod.textBox5_qty.Text, pod.textBox_total.Text, pod.pmr, pod.textBox7_free.Text);
+            
+            data.Rows.Add(pod.textBox_pid.Text, pod.textBox1_batch.Text, pod.textBox2_ex.Text, pod.textBox3_MRP.Text, pod.textBox4_rate.Text, pod.textBox5_qty.Text, pod.textBox_total.Text, pod.pmr,pod.d,pod.c,pod.fgt, pod.textBox7_free.Text);
+
+            //string s1 = "insert into podetails(drug_id,batch_no,expiry,mrp,rate,qty,total,discount,cgst,sgst,gst_total,free_qty) values('" + textBox_pid.Text + "'," + textBox1_batch.Text + ",'" + textBox2_ex.Text + "','" + textBox3_MRP.Text + "','" + textBox4_rate.Text + "','" + textBox5_qty.Text + "','" + textBox_total.Text + "','" + a + "','" + d + "','" + c + "','" + fgt + "','" + textBox7_free.Text + "')";
+
 
             updatedata(Double.Parse(pod.textBox_total.Text), pod.pmr, pod.fgt);
             pod.Dispose();
@@ -301,6 +308,60 @@ namespace LifelineApp
                 con.Close();
                 // updatedata();
             }
+            con.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            con.Open();
+            string sup = textBox_id.Text;
+            string tr = textBox_trtype.Text;
+            string bill = textBox1.Text;
+            string date = dateTimePicker1.Text;
+            string s = "insert into pomaster(inc_date,sup_id,sup_bill_no,tr_tp) values('" + date + "','" + sup + "','" + bill + "','" + tr + "')";
+            cmd = new MySqlCommand(s, con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("product details inserted");
+            con.Close();
+
+            con.Open();
+            string s1 = "insert into podetails(drug_id,batch_no,expiry,mrp,rate,qty,total,discount,cgst,sgst,gst_total,free_qty) values(@column1,@column2,@column3,@column4,@column5,@column6,@column7,@column8,@column9,@column10,@column11,@column12)";
+
+            //cmd.CommandText = "insert into podetails(drug_id,batch_no,expiry,mrp,rate,qty,total,discount,cgst,sgst,gst_total,free_qty) values('" + textBox_pid.Text + "'," + textBox1_batch.Text + ",'" + textBox2_ex.Text + "','" + textBox3_MRP.Text + "','" + textBox4_rate.Text + "','" + textBox5_qty.Text + "','" + textBox_total.Text + "','" + a + "','" + d + "','" + c + "','" + fgt + "','" + textBox7_free.Text + "')";
+            cmd = new MySqlCommand(s1, con);
+
+            cmd.Parameters.Add("@column1", MySqlDbType.Int32);
+            cmd.Parameters.Add("@column2", MySqlDbType.VarChar);
+            cmd.Parameters.Add("@column3", MySqlDbType.Date);
+            cmd.Parameters.Add("@column4", MySqlDbType.Float);
+            cmd.Parameters.Add("@column5", MySqlDbType.Float);
+            cmd.Parameters.Add("@column6", MySqlDbType.Int32);
+            cmd.Parameters.Add("@column7", MySqlDbType.Float);
+            cmd.Parameters.Add("@column8", MySqlDbType.Float);
+            cmd.Parameters.Add("@column9", MySqlDbType.Float);
+            cmd.Parameters.Add("@column10", MySqlDbType.Float);
+            cmd.Parameters.Add("@column11", MySqlDbType.Float);
+            cmd.Parameters.Add("@column12", MySqlDbType.Int32);
+
+            // Loop through the rows in the DataTable and insert them into the database
+            foreach (DataRow row in data.Rows)
+            {
+                cmd.Parameters["@column1"].Value = row["column1"];
+                cmd.Parameters["@column2"].Value = row["column2"];
+                cmd.Parameters["@column3"].Value = row["column3"];
+                cmd.Parameters["@column4"].Value = row["column3"];
+                cmd.Parameters["@column5"].Value = row["column3"];
+                cmd.Parameters["@column6"].Value = row["column3"];
+                cmd.Parameters["@column7"].Value = row["column3"];
+                cmd.Parameters["@column8"].Value = row["column3"];
+                cmd.Parameters["@column9"].Value = row["column3"];
+                cmd.Parameters["@column10"].Value = row["column3"];
+                cmd.Parameters["@column11"].Value = row["column3"];
+                cmd.Parameters["@column12"].Value = row["column3"];
+                cmd.ExecuteNonQuery();
+            }
+
+            MessageBox.Show("Dealer details inserted");
             con.Close();
         }
     }

@@ -1537,11 +1537,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Lifeline app\\Project\\LifelineApp\\LifelineApp.csproj",
+      "projectUniqueName": "D:\\Lifeline\\Project\\LifelineApp\\LifelineApp.csproj",
       "projectName": "LifelineApp",
-      "projectPath": "D:\\Lifeline app\\Project\\LifelineApp\\LifelineApp.csproj",
+      "projectPath": "D:\\Lifeline\\Project\\LifelineApp\\LifelineApp.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Lifeline app\\Project\\LifelineApp\\obj\\",
+      "outputPath": "D:\\Lifeline\\Project\\LifelineApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
